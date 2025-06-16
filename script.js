@@ -49,3 +49,15 @@ window.addEventListener('scroll', () => {
     header.style.boxShadow = 'none';
   }
 });
+
+// Chargement dynamique d'icônes pour les compétences
+const skillIcons = {
+  html: '🌐', css: '🎨', javascript: '🟨', bootstrap: '🅱️',
+  python: '🐍', java: '☕', c: '🔵', cpp: '🧩', php: '🔷', sql: '🗃️',
+  bash: '💻', powershell: '📘', vscode: '🖊️', github: '🐱',
+  git: '🔧', mysql: '🧮', postgres: '🐘', linux: '🐧',
+  virtualbox: '📦', office: '📁'
+};
+
+// Exemple: ajouter des icônes dynamiques via JS si besoin
+// (HTML pré-rempli dans la prochaine étape pour les groupes de compétences)
