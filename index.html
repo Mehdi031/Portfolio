@@ -6,12 +6,15 @@
   <title>Mehdi Chougrani - Portfolio</title>
   <meta name="description" content="Portfolio de Mehdi Chougrani, étudiant en BUT Informatique, passionné par la cybersécurité. Projets, compétences, et expériences.">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header class="fade-in">
     <div class="container">
       <h1 class="main-title">Mehdi Chougrani</h1>
-      <p class="subtitle">Étudiant en BUT Informatique & Aspirant Expert en Cybersécurité</p>
+      <p class="subtitle">BUT Informatique & Aspirant Expert en Cybersécurité</p>
       <nav>
         <ul class="nav-links">
           <li><a href="#about">Présentation</a></li>
@@ -25,7 +28,7 @@
   </header>
 
   <main>
-    <section id="about" class="section">
+    <section id="about" class="section fade-in">
       <div class="container">
         <h2>À propos de moi</h2>
         <p>Bienvenue sur mon portfolio ! Je suis <strong>Mehdi Chougrani</strong>, étudiant en BUT Informatique, passionné par les systèmes, la programmation, et surtout la <strong>cybersécurité</strong>. Depuis le lycée Simone de Beauvoir où j'ai choisi les spécialités Mathématiques et NSI, mon intérêt pour l'informatique n'a cessé de grandir.</p>
@@ -33,55 +36,61 @@
       </div>
     </section>
 
-    <section id="skills" class="section">
+    <section id="skills" class="section fade-in">
       <div class="container">
         <h2>Compétences & SAE</h2>
-        <p>Mon parcours au BUT m'a permis d'acquérir une base solide dans plusieurs domaines de l'informatique :</p>
-        <ul>
-          <li><strong>Langages :</strong> Java, Python, HTML/CSS, SQL</li>
-          <li><strong>Cybersécurité :</strong> principes fondamentaux, détection de vulnérabilités</li>
-          <li><strong>Gestion de projet :</strong> méthodes agiles, travail en équipe</li>
-          <li><strong>SAE S3 :</strong> Projet d'application Web (MVC), base de données, versioning Git</li>
-        </ul>
+        <div class="skills-grid">
+          <div class="skill-box">Java</div>
+          <div class="skill-box">Python</div>
+          <div class="skill-box">HTML/CSS</div>
+          <div class="skill-box">SQL</div>
+          <div class="skill-box">Cybersécurité</div>
+          <div class="skill-box">Réseaux</div>
+        </div>
+        <p>SAE S3 : projet d'application Web (MVC), base de données, versioning Git, méthodes agiles</p>
       </div>
     </section>
 
-    <section id="experience" class="section">
+    <section id="experience" class="section fade-in">
       <div class="container">
         <h2>Expérience professionnelle</h2>
-        <p>Stage de 2e année chez <strong>Lyman Agency</strong>, à Garges-lès-Gonesse :</p>
-        <ul>
-          <li>Participation à des projets web pour des clients locaux</li>
-          <li>Découverte de l'organisation en agence et des attentes du monde professionnel</li>
-          <li>Amélioration de mes compétences techniques et relationnelles</li>
+        <ul class="timeline">
+          <li><span>Janv - Mars 2025</span> Stage développement web chez <strong>Lyman Agency</strong></li>
+          <li><span>Depuis 2024</span> Agent d'attraction au <strong>Parc Astérix</strong></li>
+          <li><span>Depuis 2022</span> Bénévole chez <strong>ACIM</strong></li>
         </ul>
       </div>
     </section>
 
-    <section id="projects" class="section">
+    <section id="projects" class="section fade-in">
       <div class="container">
         <h2>Projets</h2>
-        <p>Voici quelques projets significatifs réalisés dans le cadre de ma formation :</p>
-        <ul>
-          <li><strong>SAE S3 - Application Web</strong> : site web dynamique avec gestion d'utilisateurs, base de données et interface claire (HTML, PHP, MySQL)</li>
-          <li><strong>SAE Réseau</strong> : installation et configuration d'un réseau local avec mesures de sécurité</li>
-          <li><strong>Projet personnel</strong> : petite application en Python de gestion de mots de passe (hors cadre BUT)</li>
-        </ul>
+        <div class="project-card">
+          <h3>Application Web (SAE S3)</h3>
+          <p>Développement d'une application web avec authentification, base de données, interface utilisateur moderne.</p>
+        </div>
+        <div class="project-card">
+          <h3>Réseau sécurisé (SAE)</h3>
+          <p>Configuration d'un réseau local en environnement virtualisé avec mesures de sécurité.</p>
+        </div>
+        <div class="project-card">
+          <h3>Projet Python perso</h3>
+          <p>Gestionnaire de mots de passe local avec cryptage et interface simple.</p>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section fade-in">
       <div class="container">
         <h2>Contact</h2>
-        <p>N'hésitez pas à me contacter pour toute question ou opportunité professionnelle :</p>
-        <p><a href="mailto:mehdichougrani95140@gmail.com">mehdichougrani95140@gmail.com</a></p>
-        <p><a href="https://github.com/mehdichougrani95140" target="_blank">Mon GitHub</a></p>
+        <p><strong>Email :</strong> <a href="mailto:mehdichougrani95140@gmail.com">mehdichougrani95140@gmail.com</a></p>
+        <p><strong>GitHub :</strong> <a href="https://github.com/mehdichougrani95140" target="_blank">@mehdichougrani95140</a></p>
         <p><a href="CV_2025-06-16_Mehdi_CHOUGRANI.pdf" download class="btn-cv">Télécharger mon CV (PDF)</a></p>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="fade-in">
     <div class="container">
       <p>&copy; 2025 Mehdi Chougrani - Portfolio personnel</p>
     </div>
