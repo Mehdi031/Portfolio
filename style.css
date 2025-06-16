@@ -1,85 +1,183 @@
+/* style.css amélioré */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+:root {
+  --primary: #1f2937;
+  --accent: #60a5fa;
+  --light: #f3f4f6;
+  --white: #ffffff;
+  --gray: #6b7280;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #f3f4f6;
-  color: #111827;
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--light);
+  color: var(--primary);
   line-height: 1.6;
 }
 
 header {
-  background-color: #111827;
-  color: #fff;
-  padding: 2rem 1rem;
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  color: var(--white);
   text-align: center;
+  padding: 3rem 1rem;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+.main-title {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  color: #9ca3af;
+  color: #dbeafe;
 }
 
-nav ul.nav-links {
+.nav-links {
+  list-style: none;
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  list-style: none;
-  margin: 1rem 0 0;
+  gap: 1.5rem;
+  margin-top: 1rem;
   padding: 0;
+  flex-wrap: wrap;
 }
 
-nav ul.nav-links li a {
-  color: #fff;
+.nav-links a {
+  color: var(--white);
   text-decoration: none;
   font-weight: bold;
-  padding: 0.5rem;
+  position: relative;
 }
 
-nav ul.nav-links li a:hover {
-  color: #60a5fa;
+.nav-links a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--white);
+  transition: width 0.3s;
 }
 
-main .section {
-  padding: 3rem 1rem;
-  background-color: #fff;
-  margin: 1rem auto;
-  max-width: 900px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-h2 {
-  border-bottom: 2px solid #60a5fa;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-footer {
-  background-color: #111827;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .container {
   width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 1100px;
+  margin: auto;
 }
 
-.invisible {
+.section {
+  background-color: var(--white);
+  padding: 4rem 1rem;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+  color: var(--primary);
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.skill-box {
+  background: var(--light);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.skill-box:hover {
+  transform: scale(1.05);
+}
+
+.project-card {
+  background-color: #f9fafb;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  border-left: 6px solid var(--accent);
+  transition: background 0.3s;
+}
+
+.project-card:hover {
+  background-color: #eff6ff;
+}
+
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  border-left: 3px solid var(--accent);
+  margin-left: 1rem;
+}
+
+.timeline li {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -0.75rem;
+  top: 0.35rem;
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.btn-cv {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.btn-cv:hover {
+  background-color: #3b82f6;
+}
+
+footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Animation fade-in */
+.fade-in {
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.6s ease-out;
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-.visible {
+.fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
