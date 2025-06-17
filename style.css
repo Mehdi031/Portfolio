@@ -79,10 +79,10 @@ nav li a:hover::after {
   font-size: 2rem;
 }
 
-.skills-block {
+.skills-block, .softskills-block {
   margin-bottom: 2rem;
 }
-.skills-title {
+.skills-title, .softskills-title {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -91,12 +91,12 @@ nav li a:hover::after {
   color: #f5faff;
   font-weight: 700;
 }
-.skills-list {
+.skills-list, .softskills-list {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
-.skill-card {
+.skill-card, .softskill-card {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -110,12 +110,13 @@ nav li a:hover::after {
   box-shadow: 0 1px 8px rgba(24,38,62,0.13);
   border: 1.5px solid #223366;
   transition: transform 0.16s, border 0.23s;
+  cursor: pointer;
 }
-.skill-card:hover {
+.skill-card:hover, .softskill-card:hover {
   transform: translateY(-4px) scale(1.05);
   border: 1.5px solid #7cc7ff;
 }
-.skill-card .icon {
+.skill-card .icon, .softskill-card .icon {
   font-size: 1.3em;
   display: flex;
   align-items: center;
@@ -131,6 +132,11 @@ nav li a:hover::after {
   position: relative;
   margin-bottom: 1.2rem;
   font-size: 1.13rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.timeline li.selected, .timeline li:hover {
+  background: #22336699;
 }
 .timeline li::before {
   content: '';
@@ -143,44 +149,10 @@ nav li a:hover::after {
   border-radius: 50%;
 }
 
-.project-card {
-  background: #16234a;
-  border-left: 4px solid #46a5ff;
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
-  padding: 1.1rem 1.3rem;
-  color: #eaf0fa;
-  box-shadow: 0 1px 8px rgba(20,40,80,0.13);
-}
-
-.btn-cv {
-  display: inline-block;
-  margin-top: 1.7rem;
-  padding: 0.8rem 2.1rem;
-  background: #61aaff;
-  color: #0e1c36;
-  font-weight: 700;
-  font-size: 1.06rem;
+.timeline-details {
+  background: #142440;
   border-radius: 9px;
-  text-decoration: none;
-  transition: background 0.22s;
-  box-shadow: 0 2px 12px rgba(24,38,62,0.09);
-}
-.btn-cv:hover {
-  background: #8cd2ff;
-}
-
-footer {
-  text-align: center;
-  color: #99bde6;
-  margin: 2.7rem 0 0.5rem 0;
-  font-size: 1.06rem;
-}
-
-@media (max-width: 700px) {
-  .skills-list {
-    flex-direction: column;
-    gap: 0.7rem;
-  }
-  .section {padding: 1.3rem 0.7rem;}
-}
+  padding: 1rem 1.1rem;
+  color: #bfe3ff;
+  font-size: 1.03rem;
+  margin-top: 0.5
