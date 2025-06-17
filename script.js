@@ -21,19 +21,25 @@ const data = {
     {icon:"🎨", label:"Créativité"}, {icon:"💬", label:"Communication"}, {icon:"👂", label:"Sens de l'écoute"}, {icon:"🏋️", label:"Persévérance"}
   ],
   formation: [
-    {
-      date: "2023 - Aujourd’hui",
-      title: "BUT Informatique",
-      place: "IUT de Villetaneuse, Université Sorbonne Paris Nord",
-      desc: "Développement web, réseaux, cybersécurité, gestion de projet, SAE, stages et pratique concrète."
-    },
-    {
-      date: "2020 - 2023",
-      title: "Baccalauréat Général (Maths, NSI) - Mention Assez Bien",
-      place: "Lycée Simone de Beauvoir, Garges-lès-Gonesse",
-      desc: "Spécialités Mathématiques & NSI. Projet de fin de terminale sur la sécurité des réseaux domestiques."
-    }
-  ],
+  {
+    date: "2023 - Aujourd’hui",
+    title: "BUT Informatique",
+    place: "IUT de Villetaneuse, Université Sorbonne Paris Nord",
+    desc: "Développement web, réseaux, cybersécurité, gestion de projet, SAE, stages et pratique concrète."
+  },
+  {
+    date: "2020 - 2023",
+    title: "Baccalauréat Général (Maths, NSI) - Mention Assez Bien",
+    place: "Lycée Simone de Beauvoir, Garges-lès-Gonesse",
+    desc: "Spécialités Mathématiques & NSI. Projet de fin de terminale sur la sécurité des réseaux domestiques."
+  },
+  {
+    date: "2016 - 2020",
+    title: "Brevet des collèges - Mention Bien",
+    place: "Collège Saint Didier, Arnouville",
+    desc: "Obtention du diplôme national du brevet avec mention bien. Premiers pas en informatique et initiation à la logique algorithmique."
+  }
+],
   experience: [
     {
       date: "Janv - Mars 2025",
