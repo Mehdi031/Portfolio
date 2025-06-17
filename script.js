@@ -1,8 +1,19 @@
-// Données du portfolio
 const data = {
   name: "Mehdi Chougrani",
   subtitle: "BUT Informatique & Aspirant expert en cybersécurité",
   about: `Étudiant à l'IUT de Villetaneuse, passionné par la cybersécurité, je poursuis un BUT Informatique avec pour objectif un Master dans ce domaine.`,
+  education: [
+    {
+      date: "2023 - Aujourd’hui",
+      title: "BUT Informatique",
+      place: "IUT de Villetaneuse, Université Sorbonne Paris Nord"
+    },
+    {
+      date: "2020 - 2023",
+      title: "Baccalauréat Général (Maths, NSI) - Mention Assez Bien",
+      place: "Lycée Simone de Beauvoir, Garges-lès-Gonesse"
+    }
+  ],
   skills: [
     {
       group: "Frontend & Web Development",
@@ -27,20 +38,6 @@ const data = {
         {name: "Bash Script", icon: "💻"},
         {name: "PowerShell", icon: "📘"},
       ]
-    },
-    {
-      group: "Outils & Logiciels",
-      icon: "🧰",
-      list: [
-        {name: "VS Code", icon: "🖊️"},
-        {name: "GitHub", icon: "🐱"},
-        {name: "Git", icon: "🔧"},
-        {name: "MySQL Workbench", icon: "🧮"},
-        {name: "PostgreSQL", icon: "🐘"},
-        {name: "Linux", icon: "🐧"},
-        {name: "VirtualBox", icon: "📦"},
-        {name: "Pack Office", icon: "📁"},
-      ]
     }
   ],
   experience: [
@@ -64,7 +61,6 @@ const data = {
     "© 2025 Mehdi Chougrani - Portfolio personnel"
 };
 
-// Génération du contenu
 function render() {
   document.getElementById("app").innerHTML = `
     <header>
@@ -73,6 +69,7 @@ function render() {
       <nav>
         <ul>
           <li><a href="#about">Présentation</a></li>
+          <li><a href="#education">Parcours scolaire</a></li>
           <li><a href="#skills">Compétences</a></li>
           <li><a href="#experience">Expérience</a></li>
           <li><a href="#projects">Projets</a></li>
@@ -85,6 +82,21 @@ function render() {
       <section class="section" id="about">
         <h2>À propos de moi</h2>
         <p>${data.about}</p>
+      </section>
+
+      <section class="section" id="education">
+        <h2>Parcours scolaire</h2>
+        <ul class="timeline">
+          ${data.education.map(
+            edu =>
+              `<li>
+                <span style="color:#7cc7ff;">${edu.date}</span>
+                <b> ${edu.title}</b>
+                <br>
+                <span style="color:#a7c7ee;">${edu.place}</span>
+              </li>`
+          ).join("")}
+        </ul>
       </section>
 
       <section class="section" id="skills">
@@ -114,18 +126,10 @@ function render() {
           ${data.experience
             .map(
               e =>
-                `<li><span style="color:#ffde81;">${e.date}</span> ${e.desc}</li>`
+                `<li><span style="color:#7cc7ff;">${e.date}</span> ${e.desc}</li>`
             )
             .join("")}
         </ul>
-        <div class="skills-list">
-          ${data.skills[2].list
-            .map(
-              tool =>
-                `<div class="skill-card"><span class="icon">${tool.icon}</span>${tool.name}</div>`
-            )
-            .join("")}
-        </div>
       </section>
 
       <section class="section" id="projects">
@@ -152,7 +156,6 @@ function render() {
   `;
 }
 
-// Scroll smooth sur la nav
 function scrollNav() {
   document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", function(e) {
@@ -163,7 +166,6 @@ function scrollNav() {
   });
 }
 
-// Animation fade-in au scroll
 function fadeInOnScroll() {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -176,7 +178,6 @@ function fadeInOnScroll() {
   });
 }
 
-// Initialisation
 document.addEventListener("DOMContentLoaded", () => {
   render();
   scrollNav();
