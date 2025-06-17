@@ -33,6 +33,12 @@ const data = {
       place: "Lycée Simone de Beauvoir, Garges-lès-Gonesse",
       desc: "Spécialités Mathématiques & NSI. Projet de fin de terminale sur la sécurité des réseaux domestiques."
     }
+    {
+    date: "2016 - 2020",
+    title: "Brevet des collèges - Mention Bien",
+    place: "Collège Saint Didier, Arnouville",
+    desc: "Obtention du diplôme national du brevet avec mention bien. Premiers pas en informatique et initiation à la logique algorithmique."
+  }
   ],
   experience: [
     {
@@ -67,7 +73,18 @@ const data = {
       title: "Gestionnaire de mots de passe",
       desc: "Application Python de gestion de mots de passe locale et sécurisée."
     }
-  ]
+  ],
+  veille: [
+    {icon: "🛡️", name:"Zataz", url:"https://www.zataz.com/"},
+    {icon: "🧑‍💻", name:"HackerOne Blog", url:"https://www.hackerone.com/blog"},
+    {icon: "📰", name:"TheHackerNews", url:"https://thehackernews.com/"},
+    {icon: "📖", name:"Journal du hacker", url:"https://journalduhacker.net/"},
+    {icon: "📅", name:"FIC (Forum Int. Cybersécurité)", url:"https://www.forum-fic.com/"},
+    {icon: "🔗", name:"Root-me", url:"https://www.root-me.org/?lang=fr"}
+  ],
+  ambitions: `Je souhaite poursuivre mes études en Master Cybersécurité après le BUT, 
+pour approfondir mes connaissances et contribuer à la protection des systèmes d’information. 
+Je suis motivé par l’apprentissage continu, la collaboration, et la résolution de problèmes complexes dans des contextes réels.`
 };
 
 function nav() {
@@ -77,6 +94,8 @@ function nav() {
     <li><a href="#formation">Formation</a></li>
     <li><a href="#experience">Expérience</a></li>
     <li><a href="#projets">Projets</a></li>
+    <li><a href="#veille">Veille</a></li>
+    <li><a href="#ambitions">Ambitions</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>`;
 }
@@ -169,6 +188,29 @@ function projets() {
   </section>
   `;
 }
+function veille() {
+  return `
+  <section class="section" id="veille">
+    <h2>Veille technologique</h2>
+    <div class="skills-cards" style="gap:0.7rem;">
+      <ul class="skills-list" style="flex-wrap:wrap;">
+        ${data.veille.map(v=>`
+          <li class="skill-chip">
+            <a href="${v.url}" target="_blank" style="color:inherit;text-decoration:none;">${v.icon} ${v.name}</a>
+          </li>`).join("")}
+      </ul>
+    </div>
+  </section>
+  `;
+}
+function ambitions() {
+  return `
+  <section class="section" id="ambitions">
+    <h2>Ambitions</h2>
+    <p>${data.ambitions}</p>
+  </section>
+  `;
+}
 function contact() {
   return `
   <section class="section" id="contact">
@@ -252,6 +294,8 @@ document.addEventListener("DOMContentLoaded", function() {
     formation(),
     experience(),
     projets(),
+    veille(),
+    ambitions(),
     contact()
   ].join('');
   document.getElementById('footer').innerHTML = footer();
