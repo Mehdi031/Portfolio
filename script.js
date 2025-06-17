@@ -32,13 +32,13 @@ const data = {
       title: "Baccalauréat Général (Maths, NSI) - Mention Assez Bien",
       place: "Lycée Simone de Beauvoir, Garges-lès-Gonesse",
       desc: "Spécialités Mathématiques & NSI. Projet de fin de terminale sur la sécurité des réseaux domestiques."
-    }
+    },
     {
-    date: "2016 - 2020",
-    title: "Brevet des collèges - Mention Bien",
-    place: "Collège Saint Didier, Arnouville",
-    desc: "Obtention du diplôme national du brevet avec mention bien. Premiers pas en informatique et initiation à la logique algorithmique."
-  }
+      date: "2016 - 2020",
+      title: "Brevet des collèges - Mention Bien",
+      place: "Collège Saint Didier, Arnouville",
+      desc: "Obtention du diplôme national du brevet avec mention bien. Premiers pas en informatique et initiation à la logique algorithmique."
+    }
   ],
   experience: [
     {
