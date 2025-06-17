@@ -1,33 +1,34 @@
 body {
-  background: #171314;
-  color: #fff;
   font-family: 'Rubik', sans-serif;
   margin: 0;
-  padding: 0;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 70% 0%, #25315c 60%, #121b32 100%) fixed;
+  color: #eaf0fa;
 }
 
 #app {
   max-width: 950px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 1rem 1rem;
 }
 
 header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 header h1 {
   font-size: 2.8rem;
   margin: 0.2em 0 0.1em 0;
-  color: #f4a949;
+  color: #46a5ff;
 }
 header .subtitle {
-  color: #bbb;
+  color: #a7c7ee;
   font-size: 1.1rem;
+  margin-bottom: 1.3rem;
 }
 
 nav {
-  margin: 2rem 0 0.5rem 0;
+  margin: 2rem 0 1rem 0;
 }
 nav ul {
   display: flex;
@@ -37,21 +38,35 @@ nav ul {
   padding: 0;
 }
 nav li a {
-  color: #ffde81;
+  color: #61aaff;
   text-decoration: none;
   font-weight: 700;
+  font-size: 1.06rem;
+  letter-spacing: 0.5px;
   transition: color 0.2s;
+  position: relative;
+}
+nav li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #61aaff;
+  transition: width 0.2s;
 }
 nav li a:hover {
-  color: #ffb700;
+  color: #b7e1ff;
+}
+nav li a:hover::after {
+  width: 100%;
 }
 
 .section {
-  background: #221b1b;
+  background: rgba(14, 28, 54, 0.98);
   border-radius: 14px;
   padding: 2.2rem 1.5rem;
   margin-bottom: 2.5rem;
-  box-shadow: 0 2px 14px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 14px rgba(20,30,60,0.10);
   animation: fadein 1s;
 }
 @keyframes fadein {
@@ -59,10 +74,11 @@ nav li a:hover {
   100% {opacity:1; transform: translateY(0);}
 }
 .section h2 {
-  color: #ffde81;
+  color: #7cc7ff;
   margin-bottom: 1.5rem;
   font-size: 2rem;
 }
+
 .skills-block {
   margin-bottom: 2rem;
 }
@@ -70,9 +86,9 @@ nav li a:hover {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 1.2rem;
+  font-size: 1.16rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: #f5faff;
   font-weight: 700;
 }
 .skills-list {
@@ -84,20 +100,20 @@ nav li a:hover {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #191919;
+  background: #19223c;
   border-radius: 10px;
   padding: 1rem 1.2rem;
   font-weight: 500;
   font-size: 1.06rem;
   min-width: 130px;
-  color: #fff;
-  box-shadow: 0 1px 8px rgba(0,0,0,0.09);
-  border: 1.5px solid #282828;
+  color: #eaf0fa;
+  box-shadow: 0 1px 8px rgba(24,38,62,0.13);
+  border: 1.5px solid #223366;
   transition: transform 0.16s, border 0.23s;
 }
 .skill-card:hover {
   transform: translateY(-4px) scale(1.05);
-  border: 1.5px solid #ffde81;
+  border: 1.5px solid #7cc7ff;
 }
 .skill-card .icon {
   font-size: 1.3em;
@@ -107,14 +123,14 @@ nav li a:hover {
 
 .timeline {
   list-style: none;
-  border-left: 3px solid #ffde81;
+  border-left: 3px solid #7cc7ff;
   padding-left: 1.5rem;
   margin-bottom: 1.5rem;
 }
 .timeline li {
   position: relative;
   margin-bottom: 1.2rem;
-  font-size: 1.1rem;
+  font-size: 1.13rem;
 }
 .timeline li::before {
   content: '';
@@ -123,40 +139,40 @@ nav li a:hover {
   top: 6px;
   width: 11px;
   height: 11px;
-  background: #ffde81;
+  background: #61aaff;
   border-radius: 50%;
 }
 
 .project-card {
-  background: #191919;
-  border-left: 4px solid #f4a949;
+  background: #16234a;
+  border-left: 4px solid #46a5ff;
   border-radius: 10px;
   margin-bottom: 1.5rem;
   padding: 1.1rem 1.3rem;
-  color: #fff;
-  box-shadow: 0 1px 8px rgba(0,0,0,0.09);
+  color: #eaf0fa;
+  box-shadow: 0 1px 8px rgba(20,40,80,0.13);
 }
 
 .btn-cv {
   display: inline-block;
   margin-top: 1.7rem;
   padding: 0.8rem 2.1rem;
-  background: #ffde81;
-  color: #1c1c1c;
+  background: #61aaff;
+  color: #0e1c36;
   font-weight: 700;
   font-size: 1.06rem;
   border-radius: 9px;
   text-decoration: none;
   transition: background 0.22s;
-  box-shadow: 0 2px 12px rgba(255,222,129,0.07);
+  box-shadow: 0 2px 12px rgba(24,38,62,0.09);
 }
 .btn-cv:hover {
-  background: #ffd44a;
+  background: #8cd2ff;
 }
 
 footer {
   text-align: center;
-  color: #888;
+  color: #99bde6;
   margin: 2.7rem 0 0.5rem 0;
   font-size: 1.06rem;
 }
