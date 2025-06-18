@@ -5,8 +5,11 @@ const data = {
   github_url: "https://github.com/mehdichougrani95140",
   cv: "CV_2025-06-16_Mehdi_CHOUGRANI.pdf",
   presentation: [
-    "Étudiant en BUT Informatique à l’IUT de Villetaneuse, passionné par la cybersécurité.",
-    "Je vise un Master en cybersécurité, toujours prêt à apprendre et à relever de nouveaux défis !"
+    "Bienvenue sur mon portfolio ! Je m’appelle Mehdi Chougrani, étudiant en BUT Informatique à l’IUT de Villetaneuse, passionné par le numérique depuis toujours.",
+    "J’ai découvert l’informatique au collège, puis je me suis passionné pour la cybersécurité, le développement web et les technologies qui changent notre quotidien.",
+    "Rigoureux, curieux et toujours motivé pour progresser, je privilégie l’apprentissage par la pratique : projets, challenges, stages et veille technique font partie de mon quotidien.",
+    "En dehors des écrans, je suis un grand fan de football 🏆, passionné de musculation, amateur de jeux vidéo et de lecture. Ces activités m’aident à développer esprit d’équipe, persévérance et ouverture d’esprit.",
+    "Mon objectif : poursuivre en Master Cybersécurité, pour protéger le monde numérique de demain !"
   ],
   skills_front: [
     {icon:"🟧", label:"HTML"}, {icon:"🟦", label:"CSS"},
@@ -25,54 +28,59 @@ const data = {
       date: "2023 - Aujourd’hui",
       title: "BUT Informatique",
       place: "IUT de Villetaneuse, Université Sorbonne Paris Nord",
-      desc: "Développement web, réseaux, cybersécurité, gestion de projet, SAE, stages et pratique concrète."
+      desc: "Spécialisation en cybersécurité, développement web, réseaux et gestion de projet. J’ai pu réaliser de nombreux projets concrets et participer à des travaux de groupe stimulants."
     },
     {
       date: "2020 - 2023",
       title: "Baccalauréat Général (Maths, NSI) - Mention Assez Bien",
       place: "Lycée Simone de Beauvoir, Garges-lès-Gonesse",
-      desc: "Spécialités Mathématiques & NSI. Projet de fin de terminale sur la sécurité des réseaux domestiques."
+      desc: "Découverte de la programmation (Python/Java) et premiers projets sur la sécurité informatique. TPE sur la sécurisation des réseaux domestiques."
     },
     {
       date: "2016 - 2020",
       title: "Brevet des collèges - Mention Bien",
       place: "Collège Saint Didier, Arnouville",
-      desc: "Obtention du diplôme national du brevet avec mention bien. Premiers pas en informatique et initiation à la logique algorithmique."
+      desc: "Premiers pas en algorithmique, ouverture à l’informatique. Obtention du brevet avec mention bien."
     }
   ],
   experience: [
     {
       date: "Janv - Mars 2025",
-      title: "Stage web",
+      title: "Stage web (développement, cybersécurité)",
       place: "Lyman Agency (Garges-lès-Gonesse)",
-      desc: "Création de sites vitrines, gestion de contenus, rigueur professionnelle."
+      desc: "Création complète d’un site vitrine pour une entreprise de rénovation : conception, développement, mise en ligne et sécurisation. J’ai aussi pu collaborer avec une équipe de développeurs et apprendre la gestion de la relation client."
     },
     {
       date: "2024 - Présent",
       title: "Agent d'attraction",
       place: "Parc Astérix",
-      desc: "Accueil du public, sécurité, logistique, travail en équipe."
+      desc: "Accueil et animation auprès du public, gestion de la sécurité et résolution de situations imprévues. Ce poste m’a permis de développer mon sens du relationnel, ma réactivité et la gestion du stress."
     },
     {
       date: "Depuis 2022",
       title: "Bénévole",
       place: "ACIM",
-      desc: "Distribution de repas, projets solidaires, organisation d'événements."
+      desc: "Distribution de repas, organisation d'événements solidaires. Un engagement qui m’a appris l’importance de l’entraide et du travail d’équipe."
     }
   ],
   projets: [
     {
       title: "SAE S3 - Application Web",
-      desc: "Développement d'une application web dynamique (MVC, base de données, gestion utilisateurs)."
+      desc: "Développement, en équipe, d'une application web complète avec architecture MVC : gestion d’utilisateurs, base de données, interface responsive (PHP/MySQL/Bootstrap). Ce projet m’a appris la coordination, la planification et le respect des deadlines."
     },
     {
-      title: "Réseau sécurisé (SAE)",
-      desc: "Installation et sécurisation d’un réseau local en environnement virtualisé."
+      title: "SAE_AppChatAnnotation",
+      desc: `Projet universitaire sur la modération et l’annotation automatique de messages : réalisation d’un outil en Java/Python, gestion de l’UI, implémentation d’algorithmes simples de détection. <a href="https://github.com/Mehdi031/SAE_AppChatAnnotation" style="color:#7cc7ff;" target="_blank">Voir sur GitHub</a>`
     },
     {
-      title: "Gestionnaire de mots de passe",
-      desc: "Application Python de gestion de mots de passe locale et sécurisée."
-    }
+      title: "Site vitrine pour une entreprise de rénovation",
+      desc: "Création, dans le cadre de mon stage, d’un site sur-mesure : analyse des besoins, maquette, développement, sécurité, déploiement. Fierté d’avoir mené ce projet du cahier des charges à la mise en ligne !"
+    },
+    // Emplacement pour futurs projets persos
+    // {
+    //   title: "Bot Discord personnel",
+    //   desc: "..."
+    // }
   ],
   veille: [
     {icon: "🛡️", name:"Zataz", url:"https://www.zataz.com/"},
@@ -82,10 +90,29 @@ const data = {
     {icon: "📅", name:"FIC (Forum Int. Cybersécurité)", url:"https://www.forum-fic.com/"},
     {icon: "🔗", name:"Root-me", url:"https://www.root-me.org/?lang=fr"}
   ],
-  ambitions: `Je souhaite poursuivre mes études en Master Cybersécurité après le BUT, 
-pour approfondir mes connaissances et contribuer à la protection des systèmes d’information. 
-Je suis motivé par l’apprentissage continu, la collaboration, et la résolution de problèmes complexes dans des contextes réels.`
+  ambitions: `
+    <p>
+      <b>Cybersécurité :</b> Après mon BUT, je souhaite intégrer un Master Cybersécurité pour me spécialiser dans la protection des systèmes d’information, la gestion des incidents et l’analyse des failles.
+    </p>
+    <p>
+      <b>Projets :</b> Je veux continuer à apprendre de nouveaux langages et frameworks (Python, Java, mais aussi Docker, React, etc) pour gagner en polyvalence.
+    </p>
+    <p>
+      <b>Soft skills :</b> Je souhaite m’impliquer dans des projets associatifs et collaboratifs pour développer mon leadership et ma capacité à travailler en équipe.
+    </p>
+    <p>
+      <b>Rêve :</b> Un jour, contribuer à la sécurité d’organisations sensibles (hôpitaux, institutions publiques, entreprises innovantes) et, pourquoi pas, transmettre mes connaissances !
+    </p>
+  `,
+  interets: [
+    {icon: "🏆", label: "Football (pratique et suivi des grandes compétitions)"},
+    {icon: "🏋️", label: "Musculation (discipline, dépassement de soi)"},
+    {icon: "🎮", label: "Jeux vidéo (jeux de stratégie, cybersécurité)"},
+    {icon: "📚", label: "Lecture (romans, actu cyber, biographies)"}
+  ]
 };
+
+// ... (le reste du code reste inchangé) ...
 
 function nav() {
   return `<ul>
@@ -96,10 +123,10 @@ function nav() {
     <li><a href="#projets">Projets</a></li>
     <li><a href="#veille">Veille</a></li>
     <li><a href="#ambitions">Ambitions</a></li>
+    <li><a href="#interets">Centres d'intérêt</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>`;
 }
-
 function accueil() {
   return `
   <section class="accueil section" id="accueil">
@@ -108,7 +135,7 @@ function accueil() {
       <div>
         <h1>${data.name}</h1>
         <h2 class="typed-text">${data.presentation[0]}</h2>
-        <p>${data.presentation[1]}</p>
+        ${data.presentation.slice(1).map(txt=>`<p>${txt}</p>`).join("")}
         <a href="#contact" class="btn-main">Me contacter</a>
       </div>
     </div>
@@ -119,6 +146,7 @@ function competences() {
   return `
   <section class="section" id="competences">
     <h2>Compétences techniques</h2>
+    <p style="color:#bde4ff;font-size:1.04em;">J’adore coder en <b>Python</b> et <b>Java</b>, mais je maîtrise aussi le développement web et plusieurs autres langages/outils.</p>
     <div class="skills-cards">
       <div class="card-domain">
         <h3>🌐 Frontend & Web Development</h3>
@@ -178,6 +206,7 @@ function projets() {
   return `
   <section class="section" id="projets">
     <h2>Projets</h2>
+    <p style="color:#bde4ff;">Voici quelques projets qui m’ont permis de mettre en pratique mes compétences et de progresser concrètement :</p>
     <div class="projects-cards">
       ${data.projets.map(p=>`
         <div class="project-card">
@@ -192,6 +221,7 @@ function veille() {
   return `
   <section class="section" id="veille">
     <h2>Veille technologique</h2>
+    <p style="color:#bde4ff;">Je consulte régulièrement ces sites et blogs pour rester informé sur la cybersécurité, les nouvelles failles et les actualités du secteur :</p>
     <div class="skills-cards" style="gap:0.7rem;">
       <ul class="skills-list" style="flex-wrap:wrap;">
         ${data.veille.map(v=>`
@@ -207,7 +237,17 @@ function ambitions() {
   return `
   <section class="section" id="ambitions">
     <h2>Ambitions</h2>
-    <p>${data.ambitions}</p>
+    ${data.ambitions}
+  </section>
+  `;
+}
+function interets() {
+  return `
+  <section class="section" id="interets">
+    <h2>Centres d'intérêt</h2>
+    <ul class="skills-list">
+      ${data.interets.map(i=>`<li class="skill-chip">${i.icon} ${i.label}</li>`).join("")}
+    </ul>
   </section>
   `;
 }
@@ -296,6 +336,7 @@ document.addEventListener("DOMContentLoaded", function() {
     projets(),
     veille(),
     ambitions(),
+    interets(),
     contact()
   ].join('');
   document.getElementById('footer').innerHTML = footer();
