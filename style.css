@@ -266,6 +266,28 @@ main {
   background: #2a3650;
   border: 1.5px solid #43b0f1;
 }
+.skill-row {
+  display: flex;
+  gap: 2.1em;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1.3em;
+}
+.icon-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1em;
+  color: #eaf0fa;
+}
+.icon-label img {
+  height: 38px;
+  margin-bottom: 0.35em;
+  background: transparent;
+  border-radius: 6px;
+  box-shadow: 0 1px 7px #19223c22;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
