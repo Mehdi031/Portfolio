@@ -181,24 +181,20 @@ function apropos() {
 
 function competences() {
   return `
-  <section class="section" id="competences">
-    <h2>Compétences techniques</h2>
-    <div class="tech-cards-flex">
-      ${data.skills.map(group=>`
-        <div class="tech-card">
-          <h3>${group.group}</h3>
-          <div class="tech-icons">
-            ${group.icons.map(i=>`
-              <span class="icon-label">
-                <img src="${i.img}" alt="${i.label}" title="${i.label}">
-                <span>${i.label}</span>
-              </span>
-            `).join("")}
-          </div>
+    <section class="section" id="competences">
+      <h2>Compétences techniques</h2>
+      ${data.skills.map(group => `
+        <h3>${group.group}</h3>
+        <div class="skill-row">
+          ${group.icons.map(skill => `
+            <span class="icon-label">
+              <img src="${skill.img}" alt="${skill.label}" title="${skill.label}">
+              <span>${skill.label}</span>
+            </span>
+          `).join("")}
         </div>
       `).join("")}
-    </div>
-  </section>
+    </section>
   `;
 }
 
