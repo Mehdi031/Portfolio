@@ -36,10 +36,9 @@ const data = {
         {img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", label: "Node.js"},
         {img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", label: "React"},
         {img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg", label: "Vue.js"},
-        {img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg", label: "Tailwind"},
+        {img: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg", label: "Tailwind"},
         {img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", label: "TypeScript"},
         {img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg", label: "Spring"},
-        {img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg", label: "NestJS"},
         {img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", label: "Next.js"},
         {img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg", label: "scikit-learn"}
       ]
@@ -69,9 +68,9 @@ const data = {
         {img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg", label: "Jupyter"},
         {img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", label: "Git"},
         {img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", label: "GitHub"},
-        {img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/office/office-plain.svg", label: "Office"},
-        {img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powerbi/powerbi-original.svg", label: "Power BI"},
-        {img: "https://seeklogo.com/images/T/talend-logo-5B9B5D7952-seeklogo.com.png", label: "Talend"}
+        {img: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Microsoft_Office_2013-2019_logo_and_wordmark.svg", label: "Office"},
+        {img: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg", label: "Power BI"},
+        {img: "https://upload.wikimedia.org/wikipedia/commons/9/97/Talend_logo.svg", label: "Talend"}
       ]
     }
   ],
