@@ -274,12 +274,13 @@ main {
   color: #eaf0fa;
 }
 .icon-label img {
-  height: 38px;
-  margin-bottom: 0.35em;
+  height: 28px;
+  margin-bottom: 0.25em;
   background: transparent;
   border-radius: 6px;
   box-shadow: 0 1px 7px #19223c22;
 }
+
 
 .contact-form {
   display: flex;
