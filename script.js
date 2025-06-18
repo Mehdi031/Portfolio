@@ -1,16 +1,21 @@
 const data = {
   name: "Mehdi Chougrani",
-  accroche: "Toujours prêt à apprendre et à relever de nouveaux défis !",
+  subtitle: "Étudiant en 2ᵉ année de BUT Informatique à l’IUT de Villetaneuse (Université Sorbonne Paris Nord)",
+  accroche_phrases: [
+    "Toujours prêt à apprendre et à relever de nouveaux défis !",
+    "Passionné par la cybersécurité et le développement web.",
+    "Curieux, motivé et engagé dans la tech !"
+  ],
   email: "mehdichougrani95140@gmail.com",
   github_url: "https://github.com/Mehdi031",
   cv: "CV_2025-06-16_Mehdi_CHOUGRANI.pdf",
   apropos: [
-    "J’ai découvert l’informatique au collège, puis je me suis passionné pour la cybersécurité, le développement web et les technologies qui changent notre quotidien.",
-    "Rigoureux, curieux et toujours motivé pour progresser, je privilégie l’apprentissage par la pratique : projets, challenges, stages et veille technique font partie de mon quotidien.",
-    "En dehors des écrans, je suis un grand fan de football 🏆, passionné de musculation, amateur de jeux vidéo et de lecture. Ces activités m’aident à développer esprit d’équipe, persévérance et ouverture d’esprit.",
+    "Actuellement étudiant en deuxième année de BUT Informatique à l’IUT de Villetaneuse (Université Sorbonne Paris Nord), je me passionne pour l’informatique depuis le collège.",
+    "Ma curiosité et mon envie de progresser m’ont naturellement orienté vers la cybersécurité et le développement web.",
+    "Je privilégie l’apprentissage par la pratique : projets, challenges, stages et veille technique rythment mon quotidien.",
+    "En dehors des écrans, je suis un grand fan de football 🏆, passionné de musculation, amateur de jeux vidéo et de lecture. Ces activités développent mon esprit d’équipe, ma persévérance et mon ouverture d’esprit.",
     "Mon objectif : poursuivre en Master Cybersécurité, pour protéger le monde numérique de demain !"
   ],
-  // ——— Compétences techniques en groupes ———
   skills: [
     {
       group: "Langages de programmation",
@@ -70,7 +75,6 @@ const data = {
       ]
     }
   ],
-  // ——— Qualités ———
   qualites: [
     {
       icon: "💡",
@@ -108,7 +112,6 @@ const data = {
       desc: "J’ai une approche logique et structurée pour analyser les problèmes et décomposer les tâches complexes en étapes gérables."
     }
   ],
-  // ——— Expériences pro ———
   experience: [
     {
       date: "2024 – Présent",
@@ -126,18 +129,17 @@ const data = {
       date: "Janv - Mars 2025",
       title: "Stage web (développement, cybersécurité)",
       place: "Lyman Agency (Garges-lès-Gonesse)",
-      desc: "Création complète d’un site vitrine pour une entreprise de rénovation : conception, développement, mise en ligne et sécurisation. J’ai aussi pu collaborer avec une équipe de développeurs et apprendre la gestion de la relation client."
+      desc: "Développement d’un vrai site de réservation pour une entreprise de rénovation : analyse des besoins, maquettes, fonctionnalités complètes (réservation, base de données, sécurité, interface admin). Projet livré mais non hébergé par l’entreprise (démonstrateur interne)."
     }
   ],
-  // ——— Projets ———
   projets: [
     {
       title: "SAE_AppChatAnnotation",
-      desc: `Projet universitaire sur la modération et l’annotation automatique de messages : réalisation d’un outil en Java/Python, gestion de l’UI, implémentation d’algorithmes simples de détection. <a href="https://github.com/Mehdi031/SAE_AppChatAnnotation" style="color:#7cc7ff;" target="_blank">Voir sur GitHub</a>`
+      desc: `Projet universitaire sur la modération et l’annotation automatique de messages : réalisation d’un outil en Java/Python, gestion de l’UI, implémentation d’algorithmes simples de détection. <a href="https://github.com/Mehdi031/SAE_AppChatAnnotation" style="color:#4a90e2;" target="_blank">Voir sur GitHub</a>`
     },
     {
-      title: "Site vitrine pour une entreprise de rénovation",
-      desc: "Création, dans le cadre de mon stage, d’un site sur-mesure : analyse des besoins, maquette, développement, sécurité, déploiement. Fierté d’avoir mené ce projet du cahier des charges à la mise en ligne !"
+      title: "Site de réservation (stage)",
+      desc: "Développement d’un vrai site de réservation pour une entreprise de rénovation : cahier des charges, maquettes, sécurité, gestion des réservations et interface administrateur. Projet livré mais non hébergé par l’entreprise."
     }
   ]
 };
@@ -158,10 +160,12 @@ function nav() {
 
 function accueil() {
   return `
-  <section class="accueil section" id="accueil">
+  <section class="accueil section" id="accueil" style="position:relative;">
     <div class="avatar-large"><span>M</span></div>
     <h1>${data.name}</h1>
-    <div class="accroche">${data.accroche}</div>
+    <div id="badgeLudique" class="badge-ludique" title="Déplace-moi !">🖥️</div>
+    <div class="accroche"><span class="typed-text"></span></div>
+    <div class="subtitle">${data.subtitle}</div>
     <a href="#contact" class="btn-main">Me contacter</a>
   </section>
   `;
@@ -206,7 +210,7 @@ function qualites() {
     <div class="qualites-header fierté">
       <span class="q-icon">${data.qualites[0].icon}</span>
       <b>${data.qualites[0].titre}</b>
-      <div style="margin-top:0.8em; color:#bde4ff;">${data.qualites[0].desc}</div>
+      <div style="margin-top:0.8em; color:#4a90e2;">${data.qualites[0].desc}</div>
     </div>
     <div class="qualites-cards">
       ${data.qualites.slice(1).map(q=>`
@@ -263,9 +267,12 @@ function contact() {
       <button type="submit">Envoyer</button>
     </form>
     <div class="contact-social">
-      <a href="mailto:${data.email}" style="color:#7cc7ff;font-weight:600;">${data.email}</a>
-      <a href="${data.github_url}" target="_blank" class="github-icon-link" title="Voir mon GitHub">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+      <a href="mailto:${data.email}" style="color:#4a90e2;font-weight:600;">
+        ${data.email}
+      </a>
+      <a href="${data.github_url}" target="_blank" class="github-icon-link" title="Voir mon GitHub" style="display: flex; align-items: center; gap:0.4em;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="height:28px;">
+        <span>GitHub</span>
       </a>
     </div>
     <div>
@@ -277,6 +284,79 @@ function contact() {
 
 function footer() {
   return `<div>© 2025 Mehdi Chougrani - Portfolio personnel</div>`;
+}
+
+// -------- Typed effect accueil (texte animé) --------
+function typedAccueil() {
+  const el = document.querySelector('.typed-text');
+  if (!el) return;
+  const phrases = data.accroche_phrases;
+  let i = 0, j = 0, erase = false;
+
+  function typeLoop() {
+    el.textContent = phrases[i].substring(0, j);
+    if (!erase && j < phrases[i].length) {
+      j++; setTimeout(typeLoop, 44);
+    } else if (!erase && j === phrases[i].length) {
+      erase = true; setTimeout(typeLoop, 1300);
+    } else if (erase && j > 0) {
+      j--; setTimeout(typeLoop, 17);
+    } else {
+      erase = false; i = (i + 1) % phrases.length; setTimeout(typeLoop, 400);
+    }
+  }
+  typeLoop();
+}
+
+// -------- Badge draggable (ludique) --------
+function badgeDraggable() {
+  const badge = document.getElementById('badgeLudique');
+  let offsetX, offsetY, dragging = false;
+
+  badge.addEventListener('mousedown', startDrag);
+  badge.addEventListener('touchstart', startDragTouch);
+
+  function startDrag(e) {
+    dragging = true;
+    const rect = badge.getBoundingClientRect();
+    offsetX = e.clientX - rect.left;
+    offsetY = e.clientY - rect.top;
+    document.addEventListener('mousemove', onDrag);
+    document.addEventListener('mouseup', stopDrag);
+  }
+  function onDrag(e) {
+    if (!dragging) return;
+    badge.style.left = (e.clientX - offsetX) + 'px';
+    badge.style.top = (e.clientY - offsetY) + 'px';
+    badge.style.transform = 'none';
+  }
+  function stopDrag() {
+    dragging = false;
+    document.removeEventListener('mousemove', onDrag);
+    document.removeEventListener('mouseup', stopDrag);
+  }
+  // Touch support (mobile)
+  function startDragTouch(e) {
+    dragging = true;
+    const touch = e.touches[0];
+    const rect = badge.getBoundingClientRect();
+    offsetX = touch.clientX - rect.left;
+    offsetY = touch.clientY - rect.top;
+    document.addEventListener('touchmove', onDragTouch);
+    document.addEventListener('touchend', stopDragTouch);
+  }
+  function onDragTouch(e) {
+    if (!dragging) return;
+    const touch = e.touches[0];
+    badge.style.left = (touch.clientX - offsetX) + 'px';
+    badge.style.top = (touch.clientY - offsetY) + 'px';
+    badge.style.transform = 'none';
+  }
+  function stopDragTouch() {
+    dragging = false;
+    document.removeEventListener('touchmove', onDragTouch);
+    document.removeEventListener('touchend', stopDragTouch);
+  }
 }
 
 // --------- Nav active + scroll fluide ----------
@@ -315,5 +395,7 @@ document.addEventListener("DOMContentLoaded", function() {
     contact()
   ].join('');
   document.getElementById('footer').innerHTML = footer();
+  typedAccueil();
   navActive();
+  badgeDraggable();
 });
