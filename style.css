@@ -119,13 +119,6 @@ main {
   margin-bottom: 1em;
   line-height: 1.6;
 }
-.tech-cards-flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
-  margin-top: 1.6rem;
-}
 .tech-card {
   background: #222a3a;
   border-radius: 13px;
@@ -388,7 +381,6 @@ footer {
   border-radius: 5px;
 }
 @media (max-width: 1100px) {
-  .tech-cards-flex { flex-direction: column; }
   .tech-card { min-width: 185px; }
 }
 @media (max-width: 700px) {
