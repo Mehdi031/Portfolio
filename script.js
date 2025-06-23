@@ -139,6 +139,14 @@ const data = {
     {
       title: "Site de réservation (stage)",
       desc: "Développement d’un vrai site de réservation pour une entreprise de rénovation : cahier des charges, maquettes, sécurité, gestion des réservations et interface administrateur. Projet livré mais non hébergé par l’entreprise."
+    },
+    {
+      title: "Calculatrice JS",
+      desc: `Mini projet personnel d’une calculatrice en JavaScript, utile pour manipuler le DOM et gérer les événements. <a href="https://github.com/Mehdi031/Calculatrice" style="color:#4a90e2;" target="_blank">Voir sur GitHub</a>`
+    },
+    {
+      title: "Santa Claus Animation",
+      desc: `Petit jeu graphique festif réalisé en JavaScript. Animation interactive autour du thème de Noël. <a href="https://github.com/Mehdi031/Santa-Claus" style="color:#4a90e2;" target="_blank">Voir sur GitHub</a>`
     }
   ]
 };
@@ -153,6 +161,7 @@ function nav() {
     <li><a href="#qualites">Qualités</a></li>
     <li><a href="#experience">Expérience</a></li>
     <li><a href="#projets">Projets</a></li>
+    <li><a href="#veille">Veille</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>`;
 }
@@ -162,11 +171,40 @@ function accueil() {
   <section class="accueil section" id="accueil" style="position:relative;">
     <div class="avatar-large"><span>M</span></div>
     <h1>${data.name}</h1>
-    <div id="badgeLudique" class="badge-ludique" title="Déplace-moi !">🖥️</div>
     <div class="accroche"><span class="typed-text"></span></div>
     <div class="subtitle">${data.subtitle}</div>
     <a href="#contact" class="btn-main">Me contacter</a>
   </section>
+  `;
+}
+function veille() {
+  const items = [
+    { icon: "💬", title: "Zataz", url: "https://www.zataz.com/" },
+    { icon: "📰", title: "Journal du Net", url: "https://www.lejournaldunet.com/" },
+    { icon: "🧾", title: "WeLoveDevs", url: "https://www.welovedevs.com/fr/articles" },
+    { icon: "🔐", title: "TryHackMe", url: "https://tryhackme.com/" },
+    { icon: "🛡️", title: "HackerOne", url: "https://www.hackerone.com/" },
+    { icon: "🧭", title: "Roadmap.sh", url: "https://roadmap.sh/" },
+    { icon: "📚", title: "DevDocs", url: "https://devdocs.io/" },
+    { icon: "🎥", title: "Micode", url: "https://www.youtube.com/@Micode" },
+    { icon: "🎬", title: "Grafikart", url: "https://www.youtube.com/@Grafikart" },
+    { icon: "🌐", title: "Parisien du Web", url: "https://www.youtube.com/@LeParisienduWeb" },
+    { icon: "🔬", title: "Dr Nozman", url: "https://www.youtube.com/@DrNozman" }
+  ];
+
+  return `
+    <section class="section" id="veille">
+      <h2>🧭 Veille technologique</h2>
+      <p>🌟 Voici les outils et ressources que je consulte régulièrement :</p>
+      <div class="veille-grid">
+        ${items.map(item => `
+          <div class="veille-card" onclick="window.open('${item.url}', '_blank')">
+            <div class="veille-icon">${item.icon}</div>
+            <div class="veille-title">${item.title}</div>
+          </div>
+        `).join("")}
+      </div>
+    </section>
   `;
 }
 
@@ -239,14 +277,29 @@ function experience() {
 function projets() {
   return `
   <section class="section" id="projets">
-    <h2>Projets</h2>
+    <h2>🛠️ Projets</h2>
     <div class="projects-cards">
-      ${data.projets.map(p=>`
+      ${data.projets.map((p, idx) => `
         <div class="project-card">
           <div class="project-title">${p.title}</div>
           <div class="desc">${p.desc}</div>
-        </div>`).join("")}
+          <button onclick="toggleProjectDetail(${idx}, event)" class="btn-toggle-detail">Voir plus</button>
+          <div class="project-detail" id="project-detail-${idx}" style="display:none;margin-top:1em;color:#b6c3db;">
+            <p><b>✨ Objectif :</b> Développer une solution concrète ou relever un défi technique.</p>
+            <p><b>💡 Ce que j'ai appris :</b> Gestion de projet, développement web, sécurité ou encore UI/UX selon les cas.</p>
+            <p><b>✅ Points positifs :</b> Autonomie, rigueur, application des compétences vues en cours.</p>
+            <p><b>🔍 Ressenti :</b> Un vrai plaisir de voir un projet fonctionner et pouvoir le présenter !</p>
+          </div>
+        </div>
+      `).join("")}
     </div>
+    <script>
+      function toggleProjectDetail(id, event) {
+        event.stopPropagation();
+        const el = document.getElementById('project-detail-' + id);
+        el.style.display = (el.style.display === 'none') ? 'block' : 'none';
+      }
+    </script>
   </section>
   `;
 }
@@ -387,6 +440,7 @@ document.addEventListener("DOMContentLoaded", function() {
     qualites(),
     experience(),
     projets(),
+    veille(),
     contact()
   ].join('');
   document.getElementById('footer').innerHTML = footer();
