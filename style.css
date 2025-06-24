@@ -389,3 +389,35 @@ footer {
   .qualites-cards, .tech-cards-flex {flex-direction: column;}
   .badge-ludique { top: 95px; font-size: 1.4em;}
 }
+
+/* Apparition douce des sections */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Boutons veille interactifs */
+.interactive-hover {
+  transition: all 0.3s ease;
+}
+.interactive-hover:hover {
+  transform: scale(1.05);
+  background-color: #324060;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Animation ouverture détails projet */
+.project-detail {
+  display: none;
+  overflow: hidden;
+  transition: opacity 0.5s ease;
+}
+.project-detail.visible {
+  display: block;
+  opacity: 1;
+}
