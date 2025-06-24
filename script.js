@@ -1,3 +1,15 @@
+// --------- Thème sombre (Dark Mode) ----------
+function toggleDarkMode() {
+  document.body.classList.toggle("dark");
+  localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+}
+
+// Appliquer le thème sauvegardé
+document.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+  }
+});
 const data = {
   name: "Mehdi Chougrani",
   subtitle: "Étudiant en 2ᵉ année de BUT Informatique à l’IUT de Villetaneuse (Université Sorbonne Paris Nord)",
@@ -10,11 +22,11 @@ const data = {
   github_url: "https://github.com/Mehdi031",
   cv: "CV_2025-06-16_Mehdi_CHOUGRANI.pdf",
   apropos: [
-    "Actuellement étudiant en deuxième année de BUT Informatique à l’IUT de Villetaneuse (Université Sorbonne Paris Nord), je me passionne pour l’informatique depuis le collège.",
-    "Ma curiosité et mon envie de progresser m’ont naturellement orienté vers la cybersécurité et le développement web.",
-    "Je privilégie l’apprentissage par la pratique : projets, challenges, stages et veille technique rythment mon quotidien.",
-    "En dehors des écrans, je suis un grand fan de football 🏆, passionné de musculation, amateur de jeux vidéo et de lecture. Ces activités développent mon esprit d’équipe, ma persévérance et mon ouverture d’esprit.",
-    "Mon objectif : poursuivre en Master Cybersécurité, pour protéger le monde numérique de demain !"
+    "Bonjour ! Je m'appelle Mehdi Chougrani, étudiant passionné en deuxième année de BUT Informatique à l’IUT de Villetaneuse (Université Sorbonne Paris Nord). Depuis mes années collège, j’ai toujours été fasciné par la logique, les défis techniques et l’univers des nouvelles technologies.",
+    "C’est naturellement que je me suis orienté vers l’informatique, avec un attrait particulier pour la cybersécurité et le développement web. Ce sont deux domaines complémentaires où je peux à la fois analyser, créer, protéger et innover.",
+    "J’aime apprendre en faisant. C’est pourquoi je consacre une grande partie de mon temps à des projets personnels, des stages, et à une veille technologique régulière pour rester à jour sur les outils et pratiques du moment.",
+    "En parallèle de mes études, je cultive mes autres passions : le football ⚽ qui m’enseigne l’esprit d’équipe et la stratégie, la musculation pour la discipline et le dépassement de soi, les jeux vidéo pour la créativité et la réflexion, et la lecture pour nourrir mon esprit.",
+    "Mon rêve à long terme ? Intégrer un Master Cybersécurité et contribuer à construire un web plus sûr, plus fiable et plus éthique pour tous. 🌍"
   ],
   skills: [
     {
@@ -78,7 +90,7 @@ const data = {
     {
       icon: "💡",
       titre: "Ce dont je suis le plus fier",
-      desc: "Ma capacité à <b>apprendre rapidement</b> et à m'adapter aux nouvelles technologies. En deux ans de BUT, j'ai su maîtriser plusieurs langages et résoudre des problèmes complexes avec méthode et persévérance."
+      desc: "Ma capacité à apprendre très rapidement et à rester curieux en toutes circonstances. En deux années de BUT Informatique, j’ai su m’approprier des langages variés, m’adapter à des projets complexes, et progresser avec régularité grâce à ma persévérance et mon envie constante d’évoluer."
     },
     {
       icon: "🎯",
@@ -116,37 +128,49 @@ const data = {
       date: "2024 – Présent",
       title: "Agent d'attraction",
       place: "Parc Astérix",
-      desc: "Accueil et animation auprès du public, gestion de la sécurité et résolution de situations imprévues. Ce poste m’a permis de développer mon sens du relationnel, ma réactivité et la gestion du stress."
+      desc: "En tant qu’agent d’attraction, j’étais responsable de l’accueil des visiteurs, de la gestion des files d’attente et de la sécurité des équipements. J’ai appris à rester calme et réactif en toutes circonstances, à gérer les imprévus avec professionnalisme, et à maintenir un sourire même en situation de stress. Cette expérience m’a vraiment permis d'améliorer ma communication et mon sens du service."
     },
     {
       date: "2022 – Présent",
       title: "Bénévole",
       place: "ACIM",
-      desc: "Distribution de repas, organisation d'événements solidaires. Un engagement qui m’a appris l’importance de l’entraide et du travail d’équipe."
+      desc: "Je participe à des actions solidaires telles que la distribution de repas ou l’organisation d’événements locaux. Être bénévole m’a ouvert les yeux sur l’importance de la solidarité et m’a permis de développer ma patience, mon sens de l’écoute et ma capacité à collaborer avec des profils très variés."
     },
     {
       date: "Janv - Mars 2025",
       title: "Stage web (développement, cybersécurité)",
       place: "Lyman Agency (Garges-lès-Gonesse)",
-      desc: "Développement d’un vrai site de réservation pour une entreprise de rénovation : analyse des besoins, maquettes, fonctionnalités complètes (réservation, base de données, sécurité, interface admin). Projet livré mais non hébergé par l’entreprise (démonstrateur interne)."
+      desc: "Ce stage a été une vraie immersion dans le monde professionnel. J’ai développé un site complet de réservation pour une entreprise de rénovation. De la prise de besoin au développement en passant par les maquettes et la sécurité, j’ai tout conçu et codé moi-même. Cela m’a permis de mettre en pratique mes compétences techniques tout en apprenant à travailler avec des attentes réelles et des contraintes concrètes."
     }
   ],
   projets: [
     {
       title: "SAE_AppChatAnnotation",
-      desc: `Projet universitaire sur la modération et l’annotation automatique de messages : réalisation d’un outil en Java/Python, gestion de l’UI, implémentation d’algorithmes simples de détection. <a href="https://github.com/Mehdi031/SAE_AppChatAnnotation" style="color:#4a90e2;" target="_blank">Voir sur GitHub</a>`
+      image: "images/chat-annotation.png",
+      desc: `Ce projet universitaire avait pour objectif de concevoir un outil d’annotation automatique de messages afin d’aider à la modération dans des discussions en ligne. Nous avons utilisé Java pour l’interface et Python pour les traitements d’analyse de texte.`,
+      detail: `Ce projet m’a particulièrement marqué car il mêlait réflexion, technique et utilité sociale. L’idée de construire un outil permettant d’aider à la modération m’a vraiment intéressé. Nous avons réfléchi aux besoins des utilisateurs, aux risques de faux positifs, et à comment rendre notre interface compréhensible pour tous. J’ai pris beaucoup de plaisir à coder l’interface en Java et à expérimenter des méthodes simples de traitement de texte avec Python. C’était un vrai défi de faire dialoguer les deux langages et de créer un prototype fluide. Ce projet m’a permis de mieux comprendre l’importance de la rigueur dans les échanges de données entre systèmes et m’a donné envie d’approfondir mes compétences en NLP (Natural Language Processing).`,
+      github: "https://github.com/Mehdi031/SAE_AppChatAnnotation"
     },
     {
       title: "Site de réservation (stage)",
-      desc: "Développement d’un vrai site de réservation pour une entreprise de rénovation : cahier des charges, maquettes, sécurité, gestion des réservations et interface administrateur. Projet livré mais non hébergé par l’entreprise."
+      image: "images/reservation.png",
+      desc: `Durant mon stage, j’ai développé un site complet de réservation pour une entreprise de rénovation. Le site permettait de créer un compte, réserver une intervention, suivre son historique, avec une interface administrateur.`,
+      detail: `C’était mon premier projet en entreprise et j’en garde un excellent souvenir. J’ai été confronté à de vraies contraintes, à des retours client, à des choix techniques qui avaient des conséquences concrètes. J’ai appris à prioriser, à communiquer, à rédiger des comptes rendus clairs. Le site devait être simple pour les utilisateurs mais robuste côté sécurité. J’ai intégré une gestion de comptes, des réservations, des validations administrateur et même un espace historique. Le client a été très satisfait, et j’ai été fier d’avoir construit tout cela de A à Z. Ce projet m’a prouvé que j’étais capable de mener un développement complet, et il a renforcé mon envie de travailler dans le web ou en cybersécurité.` ,
+      github: ""
     },
     {
       title: "Calculatrice JS",
-      desc: `Mini projet personnel d’une calculatrice en JavaScript, utile pour manipuler le DOM et gérer les événements. <a href="https://github.com/Mehdi031/Calculatrice" style="color:#4a90e2;" target="_blank">Voir sur GitHub</a>`
+      image: "images/calculatrice.png",
+      desc: `Développement en binôme d'une calculatrice en Java avec gestion des opérations de base, contrôle des erreurs et structuration orientée objet.`,
+      detail: `Dans cette activité, j'ai travaillé en binôme pour développer une calculatrice en Java. Nous avons utilisé Visual Studio Code pour programmer des fonctionnalités permettant de réaliser des opérations mathématiques de base comme l'addition, la soustraction, la multiplication et la division. Nous avons également traité des erreurs potentielles, comme la division par zéro, en ajoutant des contrôles appropriés dans notre code. Ce projet a été une excellente occasion de mettre en pratique la programmation orientée objet. Nous avons créé des diagrammes UML pour représenter les classes et les interactions, ce qui nous a aidés à organiser notre code de manière claire et structurée. Travailler sur ce projet m'a permis d'améliorer mes compétences en Java, en comprenant mieux comment structurer une application pour qu'elle soit à la fois robuste et utilisable. Cela m'a également appris l'importance de la collaboration, car nous avons dû travailler ensemble pour résoudre des problèmes et affiner notre application. Ces expériences ont renforcé ma confiance en mes capacités à développer des applications fonctionnelles et intuitives, préparant le terrain pour des projets plus complexes à l'avenir.`,
+      github: "https://github.com/Mehdi031/Calculatrice"
     },
     {
       title: "Santa Claus Animation",
-      desc: `Petit jeu graphique festif réalisé en JavaScript. Animation interactive autour du thème de Noël. <a href="https://github.com/Mehdi031/Santa-Claus" style="color:#4a90e2;" target="_blank">Voir sur GitHub</a>`
+      image: "images/santa.png",
+      desc: `Projet Python en binôme visant à planifier l’itinéraire optimal pour la tournée du Père Noël, avec analyse algorithmique et collaboration.`,
+      detail: `Dans le cadre de cette activité, intitulée "Implémentation", j'ai collaboré avec un camarade sur un projet en Python où notre mission était de planifier un itinéraire optimal pour minimiser la distance parcourue, similaire à la coordination d'une tournée pour les rennes du Père Noël. Ce projet n'a pas seulement renforcé mes compétences en programmation avec Python, mais a également affiné mes capacités d'analyse pour résoudre des problèmes complexes. Ce travail en binôme a été particulièrement enrichissant, car il a favorisé un échange actif d'idées et a permis de combler les lacunes dans nos connaissances respectives. Cela a amélioré notre compréhension du langage Python et nous a appris l'importance du travail d'équipe dans la résolution de défis techniques. Ce projet a significativement contribué à mon développement professionnel, en améliorant à la fois mes compétences techniques et mes aptitudes à collaborer efficacement au sein d'une équipe.`,
+      github: "https://github.com/Mehdi031/Santa-Claus"
     }
   ]
 };
@@ -168,7 +192,7 @@ function nav() {
 
 function accueil() {
   return `
-  <section class="accueil section" id="accueil" style="position:relative;">
+  <section class="accueil section" id="accueil" data-aos="zoom-in" style="position:relative;">
     <div class="avatar-large"><span>M</span></div>
     <h1>${data.name}</h1>
     <div class="accroche"><span class="typed-text"></span></div>
@@ -193,15 +217,14 @@ function veille() {
   ];
 
   return `
-    <section class="section" id="veille">
-      <h2>🧭 Veille technologique</h2>
-      <p>🌟 Voici les outils et ressources que je consulte régulièrement :</p>
-      <div class="veille-grid">
+    <section class="section" id="veille" data-aos="fade-up">
+      <h2>🔎 Veille technologique</h2>
+      <div class="veille-button-grid">
         ${items.map(item => `
-          <div class="veille-card" onclick="window.open('${item.url}', '_blank')">
-            <div class="veille-icon">${item.icon}</div>
-            <div class="veille-title">${item.title}</div>
-          </div>
+          <button class="veille-button" onclick="window.open('${item.url}', '_blank')">
+            <span class="veille-icon">${item.icon}</span>
+            <span class="veille-title">${item.title}</span>
+          </button>
         `).join("")}
       </div>
     </section>
@@ -210,7 +233,7 @@ function veille() {
 
 function apropos() {
   return `
-  <section class="section apropos" id="apropos">
+  <section class="section apropos" id="apropos" data-aos="fade-up">
     <h2>À propos de moi</h2>
     ${data.apropos.map(txt=>`<p>${txt}</p>`).join("")}
   </section>
@@ -219,7 +242,7 @@ function apropos() {
 
 function competences() {
   return `
-    <section class="section" id="competences">
+    <section class="section" id="competences" data-aos="fade-up">
       <h2>Compétences techniques</h2>
       ${data.skills.map(group => `
         <h3>${group.group}</h3>
@@ -238,7 +261,7 @@ function competences() {
 
 function qualites() {
   return `
-  <section class="section" id="qualites">
+  <section class="section" id="qualites" data-aos="fade-up">
     <h2>Qualités</h2>
     <div class="qualites-header fierté">
       <span class="q-icon">${data.qualites[0].icon}</span>
@@ -260,7 +283,7 @@ function qualites() {
 
 function experience() {
   return `
-  <section class="section" id="experience">
+  <section class="section" id="experience" data-aos="fade-up">
     <h2>Expériences professionnelles</h2>
     <div class="timeline-cards">
       ${data.experience.map(e=>`
@@ -277,36 +300,28 @@ function experience() {
 function projets() {
   return `
   <section class="section" id="projets">
-    <h2>🛠️ Projets</h2>
+    <h2 data-aos="fade-down">🛠️ Projets</h2>
     <div class="projects-cards">
       ${data.projets.map((p, idx) => `
-        <div class="project-card">
+        <div class="project-card hover-zoom" data-aos="fade-up" data-aos-delay="${idx * 100}">
+          <img src="${p.image}" alt="${p.title}" class="project-image">
           <div class="project-title">${p.title}</div>
           <div class="desc">${p.desc}</div>
-          <button onclick="toggleProjectDetail(${idx}, event)" class="btn-toggle-detail">Voir plus</button>
+          <button onclick="toggleProjectDetail(${idx}, event)" class="btn-toggle-detail">Voir les détails</button>
           <div class="project-detail" id="project-detail-${idx}" style="display:none;margin-top:1em;color:#b6c3db;">
-            <p><b>✨ Objectif :</b> Développer une solution concrète ou relever un défi technique.</p>
-            <p><b>💡 Ce que j'ai appris :</b> Gestion de projet, développement web, sécurité ou encore UI/UX selon les cas.</p>
-            <p><b>✅ Points positifs :</b> Autonomie, rigueur, application des compétences vues en cours.</p>
-            <p><b>🔍 Ressenti :</b> Un vrai plaisir de voir un projet fonctionner et pouvoir le présenter !</p>
+            <p>${p.detail}</p>
+            ${p.github ? `<p><a href="${p.github}" target="_blank" style="color:#4a90e2;font-weight:bold;">🔗 Voir sur GitHub</a></p>` : ""}
           </div>
         </div>
       `).join("")}
     </div>
-    <script>
-      function toggleProjectDetail(id, event) {
-        event.stopPropagation();
-        const el = document.getElementById('project-detail-' + id);
-        el.style.display = (el.style.display === 'none') ? 'block' : 'none';
-      }
-    </script>
   </section>
   `;
 }
 
 function contact() {
   return `
-  <section class="section" id="contact">
+  <section class="section" id="contact" data-aos="fade-up">
     <h2>Contact</h2>
     <form class="contact-form" action="https://formspree.io/f/mayrnvjz" method="POST">
       <input type="text" name="name" placeholder="Votre nom" required>
@@ -433,6 +448,13 @@ function navActive() {
 
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById('navbar').innerHTML = nav();
+  // Ajoute le bouton dark mode (🌙) dans la navbar
+  const themeToggle = document.createElement("button");
+  themeToggle.innerText = "🌙";
+  themeToggle.className = "theme-toggle";
+  themeToggle.onclick = toggleDarkMode;
+  document.getElementById("navbar").appendChild(themeToggle);
+
   document.getElementById('main').innerHTML = [
     accueil(),
     apropos(),
@@ -447,4 +469,18 @@ document.addEventListener("DOMContentLoaded", function() {
   typedAccueil();
   navActive();
   badgeDraggable();
+  // Active AOS après rendu du DOM dynamique
+  if (typeof AOS !== 'undefined') AOS.init({ duration: 1000, once: true });
 });
+
+// --------- Toggle project details (projets section) ----------
+function toggleProjectDetail(id, event) {
+  event.stopPropagation();
+  const allDetails = document.querySelectorAll('.project-detail');
+  const selected = document.getElementById('project-detail-' + id);
+  if (!selected) return;
+  // Use computed style to determine visibility, so we handle default CSS properly
+  const isVisible = window.getComputedStyle(selected).display === 'block';
+  allDetails.forEach(detail => detail.style.display = 'none');
+  selected.style.display = isVisible ? 'none' : 'block';
+}
