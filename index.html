@@ -6,11 +6,42 @@
   <title>Mehdi Chougrani - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
 </head>
 <body>
-  <nav id="navbar"></nav>
-  <main id="main"></main>
-  <footer id="footer"></footer>
+  <nav id="navbar">
+    <h1>Mehdi Chougrani</h1>
+    <ul class="nav-links">
+      <li><a href="#main"><i class="fas fa-laptop-code"></i> Projets</a></li>
+      <li><a href="#footer"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+  <main id="main">
+    <section class="hero" data-aos="fade-down">
+      <h2>Bienvenue sur mon Portfolio</h2>
+      <p>Je suis étudiant en BUT Informatique, passionné par le développement web et la cybersécurité.</p>
+    </section>
+    <section id="projects" class="projects-section" data-aos="fade-up">
+      <h2>Mes projets</h2>
+      <!-- Les projets seront injectés ici via JS -->
+      <div class="project-card" data-aos="zoom-in">
+        <h3>Projet Exemple</h3>
+        <p>Ceci est une carte projet temporaire ajoutée pour tester l’affichage.</p>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" data-aos="fade-in">
+    <p><i class="fas fa-copyright"></i> 2025 Mehdi Chougrani</p>
+    <p><i class="fas fa-paper-plane"></i> <a href="mailto:mehdichougrani95140@gmail.com">Contactez-moi</a></p>
+  </footer>
   <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      AOS.init({ duration: 1000, once: true });
+      setTimeout(() => AOS.refreshHard(), 200);
+    });
+  </script>
 </body>
 </html>
