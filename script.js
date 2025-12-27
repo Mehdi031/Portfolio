@@ -22,7 +22,7 @@ const data = {
   ],
   email: "mehdichougrani95140@gmail.com",
   github_url: "https://github.com/Mehdi031",
-  cv: "CV_2025-06-16_Mehdi_CHOUGRANI.pdf",
+  cv: "Cv_Mehdi_v2.pdf",
   apropos: [
     "Bonjour ! Je m'appelle Mehdi Chougrani, étudiant passionné en deuxième année de BUT Informatique à l’IUT de Villetaneuse (Université Sorbonne Paris Nord). Depuis mes années collège, j’ai toujours été fasciné par la logique, les défis techniques et l’univers des nouvelles technologies. Ce sont ces passions qui ont naturellement guidé mon parcours vers les études d'informatique.",
     "C’est tout particulièrement la cybersécurité et le développement web qui m’attirent. Ce sont deux domaines très complémentaires qui exigent à la fois rigueur, créativité et sens de l’anticipation. J’y vois la possibilité d’avoir un impact réel sur le monde numérique en participant à rendre les systèmes plus sûrs, plus performants et plus respectueux des utilisateurs.",
