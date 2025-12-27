@@ -453,7 +453,7 @@ function contact() {
       </a>
     </div>
     <div>
-      <a class="btn-main" href="${data.cv}" download style="margin-top:1.2em;display:inline-block;">Télécharger mon CV (PDF)</a>
+      <a class="btn-main" href="Cv_Mehdi_v2.pdf" download style="margin-top:1.2em;display:inline-block;">Télécharger mon CV (PDF)</a>
     </div>
   </section>
   `;
