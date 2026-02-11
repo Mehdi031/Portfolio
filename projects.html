@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Projets | Mehdi Chougrani</title>
+    <meta name="description"
+        content="Découvrez les projets de Mehdi Chougrani : Développement Web, Mobile, I.A. et Cybersécurité.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts: Outfit (Titres) + Inter (Corps) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Library (Animation On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation (Injecté par script.js) -->
+    <nav id="navbar"></nav>
+
+    <!-- Contenu Principal -->
+    <main id="main" class="container">
+        <section class="section" id="projets-header" style="text-align:center;padding:4rem 1rem;">
+            <h2 style="font-size:2.5rem;margin-bottom:1rem;">Mes Projets</h2>
+            <p class="subtitle" style="max-width:600px;margin:0 auto;color:var(--text-sub);">Une sélection de mes
+                travaux les plus récents et significatifs.<br>Du développement mobile à l'intelligence artificielle.</p>
+        </section>
+
+        <section class="section" id="projets-list">
+            <div class="projects-cards">
+                <!-- SaeChatAnnotation -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="project-image-wrapper">
+                        <img src="./images/saechat_annotation.png" alt="SaeChatAnnotation" class="project-image"
+                            onerror="this.src='https://placehold.co/600x400/2563eb/white?text=SaeChatAnnotation'">
+                    </div>
+                    <div class="project-title">SaeChatAnnotation</div>
+                    <div class="desc">Plateforme d'annotation de données conversationnelles pour l'IA (SAE).</div>
+                    <button onclick="toggleProjectDetail(0, event)" class="btn-toggle-detail">Détails</button>
+                    <div class="project-detail" id="project-detail-0" style="display:none; margin-top:1rem;">
+                        <p>Application web complète permettant l'annotation, la classification et la validation de
+                            conversations pour l'entraînement de modèles NLP. Interface ergonomique avec gestion des
+                            rôles (annotateurs, valideurs).</p>
+                        <a href="https://github.com/Mehdi031/SaeChatAnnotation" target="_blank"
+                            style="display:inline-flex;align-items:center;gap:0.5rem;color:var(--accent);font-weight:bold;text-decoration:none;">
+                            <i class="fab fa-github"></i> Voir le code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- DefiChatBruti -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image-wrapper">
+                        <img src="./images/defichatbruti.png" alt="DefiChatBruti" class="project-image"
+                            onerror="this.src='https://placehold.co/600x400/2563eb/white?text=DefiChatBruti'">
+                    </div>
+                    <div class="project-title">DefiChatBruti</div>
+                    <div class="desc">Un chatbot humoristique 'philosophe du dimanche' avec une interface style
+                        iMessage.</div>
+                    <button onclick="toggleProjectDetail(1, event)" class="btn-toggle-detail">Détails</button>
+                    <div class="project-detail" id="project-detail-1" style="display:none; margin-top:1rem;">
+                        <p>Développé en Node.js et TypeScript avec l'API OpenAI. Ce projet explore la création
+                            d'assistants conversationnels personnalisés avec deux modes : réponses pré-définies locales
+                            et réponses génératives via IA.</p>
+                        <a href="https://github.com/Mehdi031/DefiChatBruti" target="_blank"
+                            style="display:inline-flex;align-items:center;gap:0.5rem;color:var(--accent);font-weight:bold;text-decoration:none;">
+                            <i class="fab fa-github"></i> Voir le code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SAES55 (Graye) -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image-wrapper">
+                        <img src="./images/graye.png" alt="SAES55 (Graye)" class="project-image"
+                            onerror="this.src='https://placehold.co/600x400/2563eb/white?text=Graye'">
+                    </div>
+                    <div class="project-title">SAES55 (Graye)</div>
+                    <div class="desc">Application mobile intelligente de recommandation de restaurants.</div>
+                    <button onclick="toggleProjectDetail(2, event)" class="btn-toggle-detail">Détails</button>
+                    <div class="project-detail" id="project-detail-2" style="display:none; margin-top:1rem;">
+                        <p>Application React Native (Expo) utilisant un algorithme de Bandit Manchot pour adapter les
+                            recommandations aux goûts de l'utilisateur. Intègre une carte interactive et une gestion
+                            fine des préférences.</p>
+                        <a href="https://github.com/RobertGriffaton/SAES55" target="_blank"
+                            style="display:inline-flex;align-items:center;gap:0.5rem;color:var(--accent);font-weight:bold;text-decoration:none;">
+                            <i class="fab fa-github"></i> Voir le code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Le Cristalizateur -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image-wrapper">
+                        <img src="./images/cristalizateur.png" alt="Le Cristalizateur" class="project-image"
+                            onerror="this.src='https://placehold.co/600x400/2563eb/white?text=Le+Cristalizateur'">
+                    </div>
+                    <div class="project-title">Le Cristalizateur</div>
+                    <div class="desc">Outil de transformation d'images en art géométrique (Low-Poly).</div>
+                    <button onclick="toggleProjectDetail(3, event)" class="btn-toggle-detail">Détails</button>
+                    <div class="project-detail" id="project-detail-3" style="display:none; margin-top:1rem;">
+                        <p>Projet Python utilisant la triangulation de Delaunay et le traitement d'image (Pillow, NumPy)
+                            pour créer des mosaïques artistiques. Comprend une interface Pygame interactive.</p>
+                        <a href="https://github.com/Mehdi031/Le-Cristalizateur-d-Images" target="_blank"
+                            style="display:inline-flex;align-items:center;gap:0.5rem;color:var(--accent);font-weight:bold;text-decoration:none;">
+                            <i class="fab fa-github"></i> Voir le code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projet Uber Eats -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image-wrapper">
+                        <img src="./images/ubereats.png" alt="Projet Uber Eats" class="project-image"
+                            onerror="this.src='https://placehold.co/600x400/2563eb/white?text=Uber+Eats'">
+                    </div>
+                    <div class="project-title">Projet Uber Eats</div>
+                    <div class="desc">Simulation de système distribué de livraison de repas.</div>
+                    <button onclick="toggleProjectDetail(4, event)" class="btn-toggle-detail">Détails</button>
+                    <div class="project-detail" id="project-detail-4" style="display:none; margin-top:1rem;">
+                        <p>Architecture micro-services simulée en Python avec MongoDB. Gestion des états de commande,
+                            des coursiers et des restaurants en temps réel.</p>
+                        <a href="https://github.com/Mehdi031/Projet-Uber-eats" target="_blank"
+                            style="display:inline-flex;align-items:center;gap:0.5rem;color:var(--accent);font-weight:bold;text-decoration:none;">
+                            <i class="fab fa-github"></i> Voir le code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Connect Four -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image-wrapper">
+                        <img src="./images/connect4.png" alt="Connect Four" class="project-image"
+                            onerror="this.src='https://placehold.co/600x400/2563eb/white?text=Connect+Four'">
+                    </div>
+                    <div class="project-title">Connect Four</div>
+                    <div class="desc">Jeu de Puissance 4 moderne développé avec Vue.js.</div>
+                    <button onclick="toggleProjectDetail(5, event)" class="btn-toggle-detail">Détails</button>
+                    <div class="project-detail" id="project-detail-5" style="display:none; margin-top:1rem;">
+                        <p>Interface responsive, animations fluides et logique de jeu optimisée.</p>
+                        <a href="https://github.com/Mehdi031/puissance4" target="_blank"
+                            style="display:inline-flex;align-items:center;gap:0.5rem;color:var(--accent);font-weight:bold;text-decoration:none;">
+                            <i class="fab fa-github"></i> Voir le code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Injecté par script.js) -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

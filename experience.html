@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Mon Parcours | Mehdi Chougrani</title>
+    <meta name="description" content="Découvrez le parcours académique et professionnel de Mehdi Chougrani.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts: Outfit (Titres) + Inter (Corps) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Library (Animation On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- Navigation (Injecté par script.js) -->
+    <nav id="navbar"></nav>
+
+    <!-- Contenu Principal -->
+    <main id="main" class="container">
+
+        <section class="section">
+            <h2 style="font-size:2.5rem;text-align:center;margin-bottom:1rem;">Mon Parcours</h2>
+            <p class="subtitle" style="text-align:center;max-width:600px;margin:0 auto 3rem auto;">Les étapes clés de ma
+                formation et de mon expérience professionnelle.</p>
+        </section>
+
+        <!-- Parcours -->
+        <section class="section" id="experience" data-aos="fade-up">
+            <div class="timeline">
+                <div class="timeline-card">
+                    <span class="date">2024 – Présent</span>
+                    <div class="project-title">Opérateur</div>
+                    <div class="subtitle">Parc Astérix</div>
+                    <div class="desc">Gestion de la sécurité et des flux de visiteurs. Développement de soft-skills :
+                        communication, gestion du stress et travail en équipe dans un environnement dynamique.</div>
+                </div>
+                <div class="timeline-card">
+                    <span class="date">Janv - Mars 2025</span>
+                    <div class="project-title">Stage web (développement)</div>
+                    <div class="subtitle">Lyman Agency</div>
+                    <div class="desc">Conception full-stack d’un site de réservation sécurisé. Mise en place d'une
+                        architecture MVC, gestion de base de données et intégration d'API.</div>
+                </div>
+                <div class="timeline-card">
+                    <span class="date">2022 - Présent</span>
+                    <div class="project-title">BUT Informatique</div>
+                    <div class="subtitle">IUT de Villetaneuse - USPN</div>
+                    <div class="desc">Formation complète en informatique (Développement, Réseaux, Bases de données,
+                        Gestion de projet). Spécialisation en réalisation d'applications.</div>
+                </div>
+                <div class="timeline-card">
+                    <span class="date">2022</span>
+                    <div class="project-title">Baccalauréat Général</div>
+                    <div class="subtitle">Spécialités NSI et Mathématiques</div>
+                    <div class="desc">Obtention du baccalauréat avec mention. Projets en Python et découverte des
+                        algorithmes.</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Injecté par script.js) -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,47 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mehdi Chougrani - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
 </head>
+
 <body>
-  <nav id="navbar">
-    <h1>Mehdi Chougrani</h1>
-    <ul class="nav-links">
-      <li><a href="#main"><i class="fas fa-laptop-code"></i> Projets</a></li>
-      <li><a href="#footer"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
-  </nav>
-  <main id="main">
-    <section class="hero" data-aos="fade-down">
-      <h2>Bienvenue sur mon Portfolio</h2>
-      <p>Je suis étudiant en BUT Informatique, passionné par le développement web et la cybersécurité.</p>
+
+  <!-- Navigation (Injecté par script.js) -->
+  <nav id="navbar"></nav>
+
+  <!-- Contenu Principal -->
+  <main id="main" class="container">
+    <!-- Accueil -->
+    <section class="accueil" id="accueil">
+      <div class="avatar-large"><span>M</span></div>
+      <div class="subtitle">Bienvenue sur mon portfolio 👋</div>
+      <h1>Mehdi Chougrani</h1>
+      <div class="accroche"><span class="typed-text"></span></div>
+      <div class="subtitle" style="margin-bottom: 1.5rem;">Étudiant en 3ᵉ année de BUT Informatique à l’IUT de
+        Villetaneuse (Université Sorbonne Paris Nord)</div>
+
+      <!-- Social Links (LinkedIn, GitHub, CV) -->
+      <div style="display:flex;gap:1.5rem;justify-content:center;margin-bottom:2rem;align-items:center;">
+        <a href="https://www.linkedin.com/in/mehdi-chougrani-39173a272/" target="_blank" title="LinkedIn"
+          style="font-size:2rem;color:var(--text-main);transition:transform 0.3s;"
+          onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i
+            class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Mehdi031" target="_blank" title="GitHub"
+          style="font-size:2rem;color:var(--text-main);transition:transform 0.3s;"
+          onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i
+            class="fab fa-github"></i></a>
+        <a href="./Cv_Mehdi_v2.pdf" target="_blank" title="Télécharger mon CV"
+          style="font-size:2rem;color:var(--text-main);transition:transform 0.3s;"
+          onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i
+            class="fas fa-file-pdf"></i></a>
+      </div>
     </section>
-    <section id="projects" class="projects-section" data-aos="fade-up">
-      <h2>Mes projets</h2>
-      <!-- Les projets seront injectés ici via JS -->
-      <div class="project-card" data-aos="zoom-in">
-        <h3>Projet Exemple</h3>
-        <p>Ceci est une carte projet temporaire ajoutée pour tester l’affichage.</p>
+
+    <!-- Projects Teaser -->
+    <section class="section"
+      style="text-align:center;background:var(--card-bg);margin:2rem 0;border-radius:24px;padding:3rem;">
+      <h2>Mes Réalisations</h2>
+      <p class="subtitle" style="margin-bottom:2rem;">Découvrez mes projets académiques et personnels (Web, Mobile,
+        IA, SysAdmin).</p>
+      <a href="projects.html" class="btn-main">Voir tous les projets</a>
+    </section>
+
+    <!-- Contact Teaser -->
+    <section class="section" style="text-align:center;">
+      <h2>Envie de collaborer ?</h2>
+      <p class="subtitle">Je suis toujours ouvert aux nouvelles opportunités et projets innovants.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;margin-top:1.5rem;">
+        <a href="contact.html" class="btn-main">Me contacter</a>
       </div>
     </section>
   </main>
-  <footer id="footer" data-aos="fade-in">
-    <p><i class="fas fa-copyright"></i> 2025 Mehdi Chougrani</p>
-    <p><i class="fas fa-paper-plane"></i> <a href="mailto:mehdichougrani95140@gmail.com">Contactez-moi</a></p>
-  </footer>
+
+  <!-- Footer (Injecté par script.js) -->
+  <footer id="footer"></footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="script.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      AOS.init({ duration: 1000, once: true });
-      setTimeout(() => AOS.refreshHard(), 200);
-    });
+    AOS.init();
   </script>
 </body>
+
 </html>
