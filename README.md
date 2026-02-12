@@ -60,7 +60,7 @@ Passionné par le développement web et la cybersécurité, je cherche toujours 
 
 N'hésitez pas à me contacter pour toute opportunité ou collaboration !
 
-- **Email** : [mehdichougrani95140@gmail.com](mailto:mehdichougrani278@gmail.com)
+- **Email** : [mehdichougrani278@gmail.com](mailto:mehdichougrani278@gmail.com)
 - **LinkedIn** : [Mehdi Chougrani](https://www.linkedin.com/in/mehdi-chougrani-39173a272/)
 - **GitHub** : [@Mehdi031](https://github.com/Mehdi031)
 
