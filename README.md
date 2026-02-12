@@ -42,7 +42,7 @@ Ce projet est réalisé sans frameworks lourds pour garantir performance et maî
 ├── script.js         # Logique JS (Navigation, Thème, Footer, etc.)
 │
 ├── images/           # Dossier contenant les assets (Projets, Logos, etc.)
-└── Cv_Mehdi_v2.pdf   # CV au format PDF
+└── Cv_Mehdi.pdf      # CV au format PDF
 ```
 
 ## 👨‍� À propos de moi
