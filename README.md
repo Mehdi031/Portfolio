@@ -63,6 +63,7 @@ N'hésitez pas à me contacter pour toute opportunité ou collaboration !
 - **Email** : [mehdichougrani278@gmail.com](mailto:mehdichougrani278@gmail.com)
 - **LinkedIn** : [Mehdi Chougrani](https://www.linkedin.com/in/mehdi-chougrani-39173a272/)
 - **GitHub** : [@Mehdi031](https://github.com/Mehdi031)
+- **CV** : [Télécharger le CV](./Cv_Mehdi.pdf)
 
 ---
 *© 2026 Mehdi Chougrani - Fait avec ❤️ et du code.*
