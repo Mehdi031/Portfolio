@@ -28,9 +28,9 @@ function typedAccueil() {
   const el = document.querySelector('.typed-text');
   if (!el) return;
   const phrases = [
-    "Toujours prêt à apprendre et à relever de nouveaux défis !",
-    "Passionné par la cybersécurité et le développement web.",
-    "Curieux, motivé et engagé dans la tech !"
+    "À la recherche d'une alternance de 3 ans en DevOps / DevSecOps.",
+    "Passionné par l'automatisation d'infrastructures et la sécurité (Security by Design).",
+    "Futur Ingénieur ESIEA (Filière Réseaux et Sécurité) !"
   ];
   let i = 0, j = 0, erase = false;
 

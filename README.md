@@ -1,6 +1,6 @@
 # Portfolio de Mehdi Chougrani
 
-Bienvenue sur le dépôt de mon portfolio personnel. Ce site vitrine a été conçu pour présenter mon parcours, mes compétences et mes réalisations en tant qu'étudiant en 3ème année de **BUT Informatique** à l'IUT de Villetaneuse (Université Sorbonne Paris Nord).
+Bienvenue sur le dépôt de mon portfolio personnel. Ce site vitrine a été conçu pour présenter mon parcours, mes compétences et mes réalisations. Admis en Cycle Ingénieur à l'**ESIEA (Filière Réseaux et Sécurité)**, je suis actuellement à la recherche d'une alternance de 3 ans en tant qu'**Ingénieur DevOps / DevSecOps**.
 
 🔗 **[Visiter le Portfolio](https://mehdi031.github.io/Portfolio/)** (Lien à mettre à jour si nécessaire)
 
@@ -16,7 +16,7 @@ Ce portfolio a été entièrement refondu pour offrir une expérience utilisateu
 - **Interactivité** : Animations fluides (AOS), cartes interactives et effets de survol soignés.
 - **Responsive Design** : Optimisé pour tous les écrans, du mobile au desktop.
 
-## � Technologies Utilisées
+## 🛠 Technologies Utilisées
 
 Ce projet est réalisé sans frameworks lourds pour garantir performance et maîtrise du code :
 
@@ -45,15 +45,16 @@ Ce projet est réalisé sans frameworks lourds pour garantir performance et maî
 └── Cv_Mehdi.pdf      # CV au format PDF
 ```
 
-## 👨‍� À propos de moi
+## 👨‍💻 À propos de moi
 
-Passionné par le développement web et la cybersécurité, je cherche toujours à comprendre comment fonctionnent les systèmes complexes. Mon objectif est de concevoir des solutions numériques à la fois performantes, sécurisées et esthétiques.
+Passionné par l'automatisation d'infrastructures et la sécurité, je cherche toujours à concevoir des solutions numériques à la fois performantes et sécurisées (Security by Design). Mon profil hybride allie l'administration de systèmes et la conception logicielle.
 
 **Formation :**
-- **BUT Informatique** (2022 - Présent) - IUT de Villetaneuse
-- **Baccalauréat Général** (Maths/NSI)
+- **ESIEA** (2026 - 2029) - Cycle Ingénieur (Réseaux et Sécurité)
+- **BUT Informatique** (2023 - 2026) - IUT de Villetaneuse
 
 **Expérience clé :**
+- **Groupe Accor** (2026) : Consultant Technico-Fonctionnel et Sécurité (Stage).
 - **Lyman Agency** (2025) : Stage de développement web full-stack.
 
 ## 📬 Contact
