@@ -42,7 +42,7 @@ Ce projet est réalisé sans frameworks lourds pour garantir performance et maî
 ├── script.js         # Logique JS (Navigation, Thème, Footer, etc.)
 │
 ├── images/           # Dossier contenant les assets (Projets, Logos, etc.)
-└── Cv_Mehdi.pdf      # CV au format PDF
+└── cv-Mehdi.pdf      # CV au format PDF
 ```
 
 ## 👨‍💻 À propos de moi
@@ -64,7 +64,7 @@ N'hésitez pas à me contacter pour toute opportunité ou collaboration !
 - **Email** : [mehdichougrani278@gmail.com](mailto:mehdichougrani278@gmail.com)
 - **LinkedIn** : [Mehdi Chougrani](https://www.linkedin.com/in/mehdi-chougrani-39173a272/)
 - **GitHub** : [@Mehdi031](https://github.com/Mehdi031)
-- **CV** : [Télécharger le CV](./Cv_Mehdi.pdf?v=3)
+- **CV** : [Télécharger le CV](./cv-Mehdi.pdf)
 
 ---
 *© 2026 Mehdi Chougrani - Fait avec ❤️ et du code.*
