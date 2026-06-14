@@ -10,8 +10,9 @@ Bienvenue sur le dépôt de mon portfolio personnel. Ce site vitrine a été con
 
 Ce portfolio a été entièrement refondu pour offrir une expérience utilisateur fluide et professionnelle :
 
-- **Architecture Multi-Pages** : Navigation distincte entre l'Accueil, le Parcours, les Projets et le Contact pour un meilleur SEO et une structure claire.
+- **Architecture Multi-Pages** : Navigation distincte entre l'Accueil, le Parcours (avec séparation Académique / Professionnel), les Projets et le Contact.
 - **Design "Cyber Blue"** : Une esthétique moderne utilisant des nuances de bleu profond et de blanc, inspirée par la tech et la cybersécurité.
+- **Contenu Introspectif** : Ajout de sections personnelles ("Ce qui m'anime", "Bilan & Perspectives") détaillant mon évolution technique et ma transition vers le DevOps.
 - **Glassmorphism** : Utilisation d'effets de transparence et de flou pour une interface élégante et immersive.
 - **Interactivité** : Animations fluides (AOS), cartes interactives et effets de survol soignés.
 - **Responsive Design** : Optimisé pour tous les écrans, du mobile au desktop.
